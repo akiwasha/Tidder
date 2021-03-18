@@ -15,15 +15,15 @@ export class Post extends BaseEntity {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Field(() => String)
-  @CreateDateColumn()
-  createdAt = Date;
-
-  @Field(() => String)
-  @UpdateDateColumn()
-  updatedAt = Date;
-
   @Field()
   @Column()
   title!: string;
+
+  @Field(() => String)
+  @CreateDateColumn()
+  createdAt: Date;
+
+  @Field(() => String)
+  @UpdateDateColumn()
+  updatedAt: Date;
 }
